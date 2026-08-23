@@ -1,0 +1,39 @@
+@media (min-width: 1280px) {
+  .hero .inner {
+    padding-top: 5.4rem;
+    padding-bottom: 5.4rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-wrap {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .price-panel .price {
+    font-size: 2.55rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header .nav-wrap > nav.primary-menu:not([id]) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .site-header .nav-wrap > nav.primary-menu:not([id]) a {
+    padding: 0.2rem 0;
+  }
+}
