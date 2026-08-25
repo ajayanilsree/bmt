@@ -55,7 +55,7 @@
       button.addEventListener("click", (event) => {
         event.preventDefault();
         const message = document.querySelector("[data-payment-message]");
-        if (!SITE_CONFIG.razorpayPaymentUrl) {
+        if (!SITE_CONFIG.paypalPaymentUrl) {
           if (message) {
             message.textContent = "Secure online payment will be available shortly.";
             message.hidden = false;
@@ -65,7 +65,7 @@
           }
           return;
         }
-        window.location.assign(SITE_CONFIG.razorpayPaymentUrl);
+        window.open(SITE_CONFIG.paypalPaymentUrl, "_blank", "noopener,noreferrer");
       });
     });
   }

@@ -7,7 +7,7 @@ Production-ready static website for BookMyTestIreland, an independent driving-te
 - Static HTML, CSS and vanilla JavaScript only
 - Public service pages, contact page and legal policy pages
 - Central configuration in `assets/js/config.js`
-- Razorpay-hosted Payment Page integration point
+- PayPal payment page integration point
 - Payment success and failure pages for future redirects
 - SEO files: `robots.txt` and `sitemap.xml`
 - Cloudflare Pages headers and redirects
@@ -16,14 +16,14 @@ Production-ready static website for BookMyTestIreland, an independent driving-te
 
 Edit `assets/js/config.js`:
 
-- `razorpayPaymentUrl`: add the live Razorpay Payment Page or Payment Link URL
+- `paypalPaymentUrl`: currently set to `https://www.paypal.com/ncp/payment/WV8VU9P3FJ8E2`
 - `supportEmail`: currently set to `bookmytestireland@gmail.com`
 - `supportPhone`: currently set to `+91 8281949286`
 - `whatsappUrl`: currently set to `https://wa.me/918281949286`
 - `domain`: update if the final domain differs from `https://bookmytestireland.com`
 - refund and service-start placeholders: replace only after the business owner confirms policy decisions
 
-Payment buttons intentionally do not redirect when the Razorpay URL is blank. They show: "Secure online payment will be available shortly."
+Payment buttons intentionally do not redirect when the payment URL is blank. They show: "Secure online payment will be available shortly."
 
 ## Cloudflare Pages deployment
 
@@ -47,11 +47,11 @@ Payment buttons intentionally do not redirect when the Razorpay URL is blank. Th
 
 ## Future payment gateway notes
 
-Version 1 uses a Razorpay-hosted Payment Page or Payment Link. Do not put Razorpay Key Secret values in browser-side JavaScript.
+Version 1 uses a PayPal payment page. Do not put payment-provider secret values in browser-side JavaScript.
 
-If a full Razorpay Payment Gateway integration is added later, payment order creation and payment verification must run through a secure backend or serverless function such as a Cloudflare Worker.
+If a full payment gateway integration is added later, payment order creation and payment verification must run through a secure backend or serverless function such as a Cloudflare Worker.
 
-## Razorpay review checklist
+## Payment provider review checklist
 
 - Business description is visible on the homepage.
 - Price is visible on homepage and pricing page.

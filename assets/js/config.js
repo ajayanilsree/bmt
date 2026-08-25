@@ -3,7 +3,7 @@ const SITE_CONFIG = {
   operatorName: "AJAY ANIL SREE",
   servicePrice: 40,
   currency: "EUR",
-  razorpayPaymentUrl: "",
+  paypalPaymentUrl: "https://www.paypal.com/ncp/payment/WV8VU9P3FJ8E2",
   supportEmail: "bookmytestireland@gmail.com",
   supportPhone: "+91 8281949286",
   instagramUrl: "https://www.instagram.com/bookmytestireland/",
